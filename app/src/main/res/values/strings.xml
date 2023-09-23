@@ -31,4 +31,22 @@
     <string name="senhaa">Senha</string>
     <string name="cadastro">CADASTRO</string>
     <string name="LembrarSenha">lembrar senha</string>
+    <string name="voltar">VOLTAR</string>
+    <string name="pesquisar">Pesquisar</string>
+    <string name="pesquisarr">Pesquisar</string>
+
+    <!--DESCRIÇÃO PARA AS FOTOS DO SLIDE    -->
+    <string name="slide1">Fundo com uma escova de lavar</string>
+    <string name="slide2">Frasco com o logo da loja</string>
+    <string name="slide3">Sneaker de fundo</string>
+    <string name="slide4">Sneaker com os produtos da loja</string>
+    <string name="slide5">Produto da loja</string>
+    <string name="slide6">Produtos da loja em um fundo de uma quadra </string>
+    <string name="slide7">Sneaker com o produto da loja</string>
+    <string name="slide8">Raquete de tênis com o produto da loja</string>
+    <string name="slide9">Raquete com os produtos</string>
+    <string name="slide10">Raquete com os produtos</string>
+    <string name="icone_slide_voltar">voltar slide</string>
+    <string name="btn_proximo_slide">Proximo slide</string>
+
 </resources>

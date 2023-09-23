@@ -17,11 +17,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
 
-        // Referencias
+        // Referências
         telaCadastro = findViewById(R.id.btnCadastrar);
         btnLogin = findViewById(R.id.btnLogin);
 
-        // evento de clique para o botão de cadastro
+        // Evento de clique para o botão de cadastro
         telaCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // evento de clique para o botão de login
+        // Evento de clique para o botão de login
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

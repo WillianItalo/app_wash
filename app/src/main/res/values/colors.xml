@@ -6,4 +6,10 @@
     <color name="btnCadastrar">#1D1D1D</color>
     <color name="colorPrimary">@color/black</color>
     <color name="colorPrimaryDark">@color/black</color>
+    <color name="bgnavigation">#111B25</color>
+
+    <!-- INPUT DE PESQUISA QUANDO ESTÁ EM FOCO   -->
+    <color name="cor_focada">#FFFFFF</color> <!-- Vermelho quando focado -->
+    <color name="cor_padrao">#2196F3</color> <!-- Verde em outros estados -->
+
 </resources>
