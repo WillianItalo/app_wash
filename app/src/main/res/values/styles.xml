@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="EditTextWithWhiteUnderline">
+        <item name="android:textColor">@android:color/white</item> <!-- Cor do texto -->
+        <item name="colorControlNormal">@android:color/white</item> <!-- Cor da linha (underline) -->
+        <item name="colorControlActivated">@android:color/white</item> <!-- Cor da linha (underline) quando estiver focado -->
+
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+</resources>

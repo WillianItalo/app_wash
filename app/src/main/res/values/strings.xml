@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Wash it</string>
+    <string name="todo">TODO</string>
+    <string name="fundo">fundo de login\n</string>
+    <string name="login">Login</string>
+    <string name="dwwdw">TODO</string>
+    <string name="yjyj">TODO</string>
+    <string name="loginn">LOGIN</string>
+    <string name="Senha">Senha\n\n</string>
+    <string name="senha">Senha</string>
+    <string name="termos">Termos</string>
+    <string name="termoss">Termos</string>
+    <string name="iconeperfil">icone\n</string>
+    <string name="iconeperfill">TODO</string>
+    <string name="esqueceu_a_senha">Esqueceu a senha</string>
+    <string name="esqueceu_a_senhaa">Esqueceu a senha?</string>
+    <string name="google">google\n</string>
+    <string name="registrar">REGISTRAR</string>
+    <string name="l_o_g_i_n">L O G I N</string>
+    <string name="imgSplash">TODO</string>
+    <string name="title_activity_cadastro">Cadastro</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="cadastrar">CADASTRAR</string>
+    <string name="confirme_a_senha">Confirme a Senha</string>
+    <string name="email">Email</string>
+    <string name="nome">Nome</string>
+    <string name="senhaa">Senha</string>
+    <string name="cadastro">CADASTRO</string>
+    <string name="LembrarSenha">lembrar senha</string>
+</resources>
