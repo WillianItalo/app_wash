@@ -5,18 +5,17 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import android.view.Menu;
 import android.widget.ImageButton;
 import android.widget.ViewFlipper;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.textfield.TextInputEditText;
 import java.util.Objects;
 
 public class TelaCentral extends AppCompatActivity {
@@ -33,26 +32,41 @@ public class TelaCentral extends AppCompatActivity {
         setContentView(R.layout.activity_tela_central);
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-
-
+        new Handler().postDelayed(() -> new Intent(TelaCentral.this, TelaCentral.class), 3000);
 
         // MENU BOTTOM
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         Menu menu = bottomNavigationView.getMenu();
 
+
         // Marcar o item "Home" como ativo
         menu.findItem(R.id.idHome).setChecked(true);
 
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+
+            if (itemId == R.id.idPagamento) {
+                startActivity(new Intent(TelaCentral.this, Pagamento.class));
+                return true;
+            } else if (itemId == R.id.idEntrega) {
+                startActivity(new Intent(TelaCentral.this, Entrega.class));
+                return true;
+            } else if (itemId == R.id.idServico) {
+                startActivity(new Intent(TelaCentral.this, Servico.class));
+                return true;
+            } else if (itemId == R.id.idPedido) {
+                startActivity(new Intent(TelaCentral.this, Pedido.class));
+                return true;
+            }
+            // Se nenhum item corresponder, retorne falso
+            return false;
+        });
+
+
         // Inicialize os elementos de interface do usuário
-        Button btnVoltar = findViewById(R.id.btnVoltar);
         searchEditText = findViewById(R.id.searchEditText);
         ConstraintLayout mainLayout = findViewById(R.id.layouprincipal);
 
-        // Configurar o botão "Voltar" para retornar à tela de login (MainActivity)
-        btnVoltar.setOnClickListener(v -> {
-            Intent intent = new Intent(TelaCentral.this, MainActivity.class);
-            startActivity(intent);
-        });
 
         // Adicionar um ouvinte de toque ao campo de pesquisa para detectar o toque no drawableEnd
         searchEditText.setOnTouchListener((v, event) -> {

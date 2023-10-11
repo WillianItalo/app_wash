@@ -3,24 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layouprincipal"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:background="@color/white"
-    tools:context=".TelaCentral">
+    android:orientation="vertical"
+    android:scrollbars="vertical|horizontal">
 
     <!-- Conteúdo principal da tela aqui -->
 
-
     <ViewFlipper
-
         android:id="@+id/sliderflipper"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="5dp"
         android:autoStart="true"
-        android:flipInterval="3500"
+        android:flipInterval="4000"
         android:inAnimation="@android:anim/slide_in_left"
         android:outAnimation="@android:anim/slide_out_right"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,106 +24,97 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view">
 
+        <!-- Adicione suas ImageView aqui -->
 
         <ImageView
             android:id="@+id/slide3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@string/slide3"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/slide3" />
 
         <ImageView
+            android:id="@+id/slide4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/slide4"
+            android:scaleType="centerCrop"
+            android:src="@drawable/slide4" />
+
+        <ImageView
             android:id="@+id/slide1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@string/slide1"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/slide1" />
 
         <ImageView
+            android:id="@+id/slide5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/slide5"
+            android:scaleType="centerCrop"
+            android:src="@drawable/slide5" />
+
+        <ImageView
+            android:id="@+id/slide6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/slide6"
+            android:scaleType="centerCrop"
+            android:src="@drawable/slide6" />
+
+        <ImageView
+
+            android:id="@+id/slide7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/slide7"
+            android:scaleType="centerCrop"
+            android:src="@drawable/slide7" />
+
+        <ImageView
+            android:id="@+id/slide8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/slide8"
+            android:scaleType="centerCrop"
+            android:src="@drawable/slide8" />
+
+        <ImageView
+            android:id="@+id/slide9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/slide9"
+            android:scaleType="centerCrop"
+            android:src="@drawable/slide9" />
+
+        <ImageView
+            android:id="@+id/slide10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/slide10"
+            android:scaleType="centerCrop"
+            android:src="@drawable/slide10" />
+
+
+        <ImageView
             android:id="@+id/slide2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@string/slide2"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/slide2" />
 
 
-        <ImageView
-            android:id="@+id/slide5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/slide5"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/slide5" />
-
-        <ImageView
-            android:id="@+id/slide4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/slide4"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/slide4" />
-
-
-        <ImageView
-            android:id="@+id/slide6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/slide6"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/slide6" />
-
-        <ImageView
-            android:id="@+id/slide7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/slide7"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/slide7" />
-
-        <ImageView
-            android:id="@+id/slide8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/slide8"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/slide8" />
-
-        <ImageView
-            android:id="@+id/slide9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/slide9"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/slide9" />
-
-        <ImageView
-            android:id="@+id/slide10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/slide10"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/slide10" />
-
-
     </ViewFlipper>
 
-    <Button
-        android:id="@+id/btnVoltar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/voltar"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!-- Fim do conteúdo principal   -->
-
+    <!-- Fim do conteúdo principal -->
 
     <!-- BottomNavigationView -->
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="0dp"
@@ -137,7 +124,6 @@
         app:itemIconSize="35dp"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -200,14 +186,25 @@
         android:id="@+id/view2"
         android:layout_width="0dp"
         android:layout_height="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
         android:background="@drawable/barra_de_decoracao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sliderflipper" />
 
-    <!-- BTN DE VOLTAR IMG DO SLIDE   -->
+    <!-- BTN DE VOLTAR IMG DO SLIDE -->
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:background="@drawable/barra_de_decoracao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
     <ImageButton
         android:id="@+id/btnAnterior"
         android:layout_width="50dp"
@@ -220,11 +217,12 @@
         app:layout_constraintTop_toTopOf="@+id/sliderflipper"
         app:srcCompat="@drawable/icone_voltar_slide" />
 
-    <!--  BTN DE PROXIMO IMG DO SLIDE  -->
+    <!-- BTN DE PROXIMO IMG DO SLIDE -->
     <ImageButton
         android:id="@+id/btnProximo"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginEnd="15dp"
         android:background="@drawable/bg_transparente"
         android:contentDescription="@string/btn_proximo_slide"
         app:layout_constraintBottom_toBottomOf="@+id/sliderflipper"
@@ -232,8 +230,129 @@
         app:layout_constraintTop_toTopOf="@+id/sliderflipper"
         app:srcCompat="@drawable/icone_proximo_slide" />
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/view2">
+
+        <!-- ANÚNCIOS -->
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/anuncio1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/anuncio"
+            android:scaleType="centerCrop"
+            android:src="@drawable/anuncio1" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/anuncio2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/anuncio2"
+            tools:ignore="ImageContrastCheck" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView5"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical|horizontal"
+        app:barrierMargin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/cinza">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cinza"
+            android:columnCount="2"
+            android:scrollbarSize="8dp"
+            android:scrollbars="vertical">
 
+
+            <ImageView
+                android:id="@+id/dica1"
+                android:layout_width="300dp"
+                android:layout_height="360dp"
+                android:contentDescription="@string/dica"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/dica1" />
+
+
+            <ImageView
+                android:id="@+id/dica2"
+                android:layout_width="300dp"
+                android:layout_height="360dp"
+                android:contentDescription="@string/dica2"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/dica2" />
+
+
+            <ImageView
+                android:id="@+id/dica3"
+                android:layout_width="300dp"
+                android:layout_height="360dp"
+                android:contentDescription="@string/dica3"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/dica3" />
+
+
+            <ImageView
+                android:id="@+id/dica4"
+                android:layout_width="300dp"
+                android:layout_height="360dp"
+                android:contentDescription="@string/dica4"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/dica4" />
+
+
+            <ImageView
+                android:id="@+id/dica5"
+                android:layout_width="300dp"
+                android:layout_height="360dp"
+                android:contentDescription="@string/dica5"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/dica5" />
+
+
+            <ImageView
+                android:id="@+id/dica6"
+                android:layout_width="300dp"
+                android:layout_height="360dp"
+                android:contentDescription="@string/dica6"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/dica6" />
+
+
+            <ImageView
+                android:id="@+id/dica7"
+                android:layout_width="303dp"
+                android:layout_height="360dp"
+                android:contentDescription="@string/dica7"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/dica7" />
+        </GridLayout>
+        </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

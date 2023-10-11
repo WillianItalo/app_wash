@@ -7,6 +7,8 @@
     <color name="colorPrimary">@color/black</color>
     <color name="colorPrimaryDark">@color/black</color>
     <color name="bgnavigation">#111B25</color>
+    <color name="cinza">#B6B6B6</color>
+    <color name="bg_azulbb">#4683BA</color>
 
     <!-- INPUT DE PESQUISA QUANDO ESTÁ EM FOCO   -->
     <color name="cor_focada">#FFFFFF</color> <!-- Vermelho quando focado -->

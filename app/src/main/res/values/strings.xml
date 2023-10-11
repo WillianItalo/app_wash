@@ -48,5 +48,22 @@
     <string name="slide10">Raquete com os produtos</string>
     <string name="icone_slide_voltar">voltar slide</string>
     <string name="btn_proximo_slide">Proximo slide</string>
+    <string name="anuncio">Anuncio 1</string>
+    <string name="anuncio2">Anuncio 2</string>
+    <string name="caixa_dos_anuncios">caixa dos anuncios</string>
+    <string name="anuncio3">anuncio3</string>
+    <string name="caixa_scroll">caixa scroll</string>
+    <string name="dica">dica1</string>
+    <string name="dica2">dica2\n\t\t\t</string>
+    <string name="dica3">dica3</string>
+    <string name="dica4">dica4</string>
+    <string name="dica5">dica5</string>
+    <string name="dica6">dica6</string>
+    <string name="dica7">dica7</string>
+    <string name="entrega">Entrega</string>
+    <string name="home">Home</string>
+    <string name="pag">Pag</string>
+    <string name="pedido">Pedido</string>
+    <string name="servi_o">Serviço</string>
 
 </resources>
