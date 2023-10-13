@@ -4,8 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="iconeRetangulo">#5B5B5B</color>
     <color name="btnCadastrar">#1D1D1D</color>
-    <color name="colorPrimary">@color/black</color>
-    <color name="colorPrimaryDark">@color/black</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">@color/white</color>
     <color name="bgnavigation">#111B25</color>
     <color name="cinza">#ECEDEC</color>
     <color name="bg_azulbb">#4683BA</color>

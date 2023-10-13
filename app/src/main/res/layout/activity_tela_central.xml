@@ -178,9 +178,9 @@
         android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="10dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/barra_de_decoracao"
         android:backgroundTint="@color/azul_do_wash_azul"
-        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_bg_fundo" />
@@ -285,8 +285,8 @@
             <GridLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/cinza"
                 android:layout_marginTop="10dp"
+                android:background="@color/cinza"
                 android:columnCount="7"
                 android:orientation="horizontal"
                 android:scrollbarSize="8dp"

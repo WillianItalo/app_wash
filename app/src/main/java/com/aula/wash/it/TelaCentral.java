@@ -4,9 +4,7 @@ package com.aula.wash.it;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,6 +17,7 @@ import androidx.core.content.ContextCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputEditText;
+
 import java.util.Objects;
 
 public class TelaCentral extends AppCompatActivity {
@@ -36,11 +35,7 @@ public class TelaCentral extends AppCompatActivity {
         //OCULTA A LABEL DO TITULO DO APP
         Objects.requireNonNull(getSupportActionBar()).hide();
         // ALTERA A COR DOS STATUS (BARRA DE ICONES, ex. horas, wifi ...)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.azul_do_wash_azul));
-        }
-
-        new Handler().postDelayed(() -> new Intent(TelaCentral.this, TelaCentral.class), 3000);
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.azul_do_wash_azul));
 
         // MENU BOTTOM
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
