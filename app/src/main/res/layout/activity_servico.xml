@@ -4,4 +4,118 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Pedido"/>
+    android:background="@color/white">
+
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/navtop"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/txt_logo_top"
+        android:scaleType="centerCrop"
+        android:src="@drawable/nome_logo_wash"
+        app:layout_constraintBottom_toTopOf="@+id/view5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- NUMERO QUE REPRESENTA A QUANTIDADE QUE TEM NO CARRINHO   -->
+    <TextView
+        android:id="@+id/quantidadeItens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/carrinhoDecompras"
+        app:layout_constraintEnd_toEndOf="@+id/carrinhoDecompras"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toEndOf="@+id/imageView" />
+
+    <!--  IMAGEM DO CARRINHO  -->
+    <ImageView
+        android:id="@+id/carrinhoDecompras"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:srcCompat="@drawable/icone_carrinho_servicos_24" />
+
+    <!-- BARRA DE DECORAÇÃO   -->
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/barra_de_decoracao"
+        android:backgroundTint="@color/azul_do_wash_azul"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+
+    <!-- FUNDO DE DECORAÇÃO   -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/fundo_decorativo_servicos"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/view7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5">
+
+        <!--  RECYCLERVIEW DE SERVIÇOS      -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerServicos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:elevation="5dp"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="421dp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/barra_de_decoracao"
+        android:backgroundTint="@color/azul_do_wash_azul"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view7"
+        app:layout_constraintStart_toStartOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/view7"
+        app:srcCompat="@drawable/baseline_home_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

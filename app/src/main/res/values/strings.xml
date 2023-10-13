@@ -46,6 +46,7 @@
     <string name="slide8">Raquete de tênis com o produto da loja</string>
     <string name="slide9">Raquete com os produtos</string>
     <string name="slide10">Raquete com os produtos</string>
+    <!-- FIM SLIDE   -->
     <string name="icone_slide_voltar">voltar slide</string>
     <string name="btn_proximo_slide">Proximo slide</string>
     <string name="anuncio">Anuncio 1</string>
@@ -53,17 +54,33 @@
     <string name="caixa_dos_anuncios">caixa dos anuncios</string>
     <string name="anuncio3">anuncio3</string>
     <string name="caixa_scroll">caixa scroll</string>
+    <!--  IMG DE DICAS DE SNEAKER  -->
     <string name="dica">dica1</string>
-    <string name="dica2">dica2\n\t\t\t</string>
+    <string name="dica2">dica2</string>
     <string name="dica3">dica3</string>
     <string name="dica4">dica4</string>
     <string name="dica5">dica5</string>
     <string name="dica6">dica6</string>
     <string name="dica7">dica7</string>
-    <string name="entrega">Entrega</string>
-    <string name="home">Home</string>
-    <string name="pag">Pag</string>
-    <string name="pedido">Pedido</string>
-    <string name="servi_o">Serviço</string>
+    <!-- FIM DICAS   -->
+
+    <!--  ICONES NAVBAR  -->
+        <string name="entrega">Entrega</string>
+        <string name="home">Home</string>
+        <string name="pag">Pag</string>
+        <string name="pedido">Pedido</string>
+
+    <!-- SERVIÇOS   -->
+        <!--  1   -->
+        <string name="servi_o">Serviço</string>
+        <string name="txt_logo_top">txt_logo_top</string>
+        <string name="adicionar_ao_carrinho">ADD AO CARRINHO</string>
+        <string name="nome_do_servi_o">Serviço 1</string>
+        <string name="r_50_00">R$ 50.00</string>
+        <string name="titulo_servico">Higienização geral</string>
+        <string name="img_servico1">img_servico1</string>
+        <!--  2   -->
+
+
 
 </resources>

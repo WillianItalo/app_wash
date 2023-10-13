@@ -4,6 +4,7 @@ package com.aula.wash.it;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
@@ -14,6 +15,8 @@ import android.widget.ImageButton;
 import android.widget.ViewFlipper;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputEditText;
 import java.util.Objects;
@@ -30,7 +33,12 @@ public class TelaCentral extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_central);
+        //OCULTA A LABEL DO TITULO DO APP
         Objects.requireNonNull(getSupportActionBar()).hide();
+        // ALTERA A COR DOS STATUS (BARRA DE ICONES, ex. horas, wifi ...)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.azul_do_wash_azul));
+        }
 
         new Handler().postDelayed(() -> new Intent(TelaCentral.this, TelaCentral.class), 3000);
 
@@ -139,7 +147,7 @@ public class TelaCentral extends AppCompatActivity {
         }
     }
 
-    // Lidar com o resultado do reconhecimento de voz
+    // Lida com o resultado do reconhecimento de voz
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -153,7 +161,7 @@ public class TelaCentral extends AppCompatActivity {
         }
     }
 
-    // Método para ocultar o teclado virtual
+    // Oculta o teclado virtual ao clicar fora de um campo
     private void hideKeyboard(View view) {
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm != null) {

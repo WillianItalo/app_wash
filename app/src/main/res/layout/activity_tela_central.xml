@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layouprincipal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
     android:scrollbars="vertical|horizontal">
@@ -120,7 +120,7 @@
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:layout_gravity="bottom"
-        android:background="@color/bgnavigation"
+        android:background="@color/azul_do_wash_azul"
         app:itemIconSize="35dp"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
@@ -135,6 +135,7 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:background="@drawable/navtop"
+        android:backgroundTint="@color/azul_do_wash_azul"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -178,6 +179,8 @@
         android:layout_width="0dp"
         android:layout_height="10dp"
         android:background="@drawable/barra_de_decoracao"
+        android:backgroundTint="@color/azul_do_wash_azul"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_bg_fundo" />
@@ -186,8 +189,9 @@
         android:id="@+id/view2"
         android:layout_width="0dp"
         android:layout_height="10dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/barra_de_decoracao"
+        android:backgroundTint="@color/azul_do_wash_azul"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -200,6 +204,8 @@
         android:layout_width="0dp"
         android:layout_height="10dp"
         android:background="@drawable/barra_de_decoracao"
+        android:backgroundTint="@color/azul_do_wash_azul"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -234,6 +240,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal"
         android:weightSum="2"
         app:layout_constraintTop_toBottomOf="@+id/view2">
@@ -263,95 +270,92 @@
     <ScrollView
         android:id="@+id/scrollView5"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="wrap_content"
         android:fillViewport="true"
-        android:scrollbars="vertical|horizontal"
-        app:barrierMargin="10dp"
+        android:scrollbars="horizontal"
+        app:barrierMargin="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view3">
+
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/cinza"
+                android:layout_marginTop="10dp"
+                android:columnCount="7"
+                android:orientation="horizontal"
+                android:scrollbarSize="8dp"
+                android:scrollbars="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/cinza">
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/cinza"
-            android:columnCount="2"
-            android:scrollbarSize="8dp"
-            android:scrollbars="vertical">
+                <ImageView
+                    android:id="@+id/dica1"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:contentDescription="@string/dica"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/dica1" />
 
-
-            <ImageView
-                android:id="@+id/dica1"
-                android:layout_width="300dp"
-                android:layout_height="360dp"
-                android:contentDescription="@string/dica"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/dica1" />
-
-
-            <ImageView
-                android:id="@+id/dica2"
-                android:layout_width="300dp"
-                android:layout_height="360dp"
-                android:contentDescription="@string/dica2"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/dica2" />
+                <ImageView
+                    android:id="@+id/dica2"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:contentDescription="@string/dica2"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/dica2" />
 
 
-            <ImageView
-                android:id="@+id/dica3"
-                android:layout_width="300dp"
-                android:layout_height="360dp"
-                android:contentDescription="@string/dica3"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/dica3" />
+                <ImageView
+                    android:id="@+id/dica3"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:contentDescription="@string/dica3"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/dica3" />
+
+                <ImageView
+                    android:id="@+id/dica4"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:contentDescription="@string/dica4"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/dica4" />
 
 
-            <ImageView
-                android:id="@+id/dica4"
-                android:layout_width="300dp"
-                android:layout_height="360dp"
-                android:contentDescription="@string/dica4"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/dica4" />
+                <ImageView
+                    android:id="@+id/dica5"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:contentDescription="@string/dica5"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/dica5" />
 
 
-            <ImageView
-                android:id="@+id/dica5"
-                android:layout_width="300dp"
-                android:layout_height="360dp"
-                android:contentDescription="@string/dica5"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/dica5" />
+                <ImageView
+                    android:id="@+id/dica6"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:contentDescription="@string/dica6"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/dica6" />
 
 
-            <ImageView
-                android:id="@+id/dica6"
-                android:layout_width="300dp"
-                android:layout_height="360dp"
-                android:contentDescription="@string/dica6"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/dica6" />
+                <ImageView
+                    android:id="@+id/dica7"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:contentDescription="@string/dica7"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/dica7" />
 
 
-            <ImageView
-                android:id="@+id/dica7"
-                android:layout_width="303dp"
-                android:layout_height="360dp"
-                android:contentDescription="@string/dica7"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/dica7" />
-        </GridLayout>
-        </LinearLayout>
+            </GridLayout>
         </HorizontalScrollView>
     </ScrollView>
 
