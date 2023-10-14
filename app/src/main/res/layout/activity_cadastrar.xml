@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@drawable/fundo2"
+    android:background="@color/azul_do_wash_azul"
     tools:context=".Cadastrar">
 
     <!-- Fundo decorativo -->
@@ -17,11 +17,9 @@
         android:layout_height="80dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:alpha="0.3"
-        android:background="@color/black"
+        android:background="@color/white"
         android:fontFamily="@font/arimo"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayoutName"
@@ -38,10 +36,10 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="50dp"
-        android:background="@color/btnCadastrar"
+        android:background="@color/white"
         android:padding="20dp"
         android:text="CADASTRAR"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/azul_do_wash_azul"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -155,12 +153,12 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="50dp"
-        android:background="@color/btnCadastrar"
+        android:background="@color/white"
         android:drawableTop="@drawable/baseline_home_24"
         android:gravity="center_vertical|center_horizontal"
         android:paddingTop="15dp"
         android:text="VOLTAR"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/azul_do_wash_azul"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -173,7 +171,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="C A D A S T R O"
-        android:textColor="@color/white"
+        android:textColor="@color/azul_do_wash_azul"
         android:textSize="30dp"
         android:textStyle="italic"
         app:layout_constraintTop_toTopOf="@+id/fundoDecoracao"
@@ -182,23 +180,6 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Barra preta decorativa abaixo do botão Voltar -->
-    <TextView
-        android:id="@+id/textViewTitle2"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="44dp"
-        android:alpha="0.3"
-        android:background="@color/black"
-        android:fontFamily="@font/arimo"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/voltarLogin"
-        app:layout_constraintVertical_bias="1.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

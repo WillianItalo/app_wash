@@ -1,19 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="EditTextWithWhiteUnderline">
         <item name="android:textColor">@android:color/white</item> <!-- Cor do texto -->
         <item name="colorControlNormal">@android:color/white</item> <!-- Cor da linha (underline) -->
         <item name="colorControlActivated">@android:color/white</item> <!-- Cor da linha (underline) quando estiver focado -->
-
     </style>
+
     <!-- DEFINE UMA COR PARA A BARRA DO CELULAR   -->
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="color">@color/white</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+
+
     </style>
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+    </style>
+
     <!-- CENTRALIZA O TEXT HINT DO PESQUISAR   -->
     <style name="CenteredHintTextAppearance" parent="TextAppearance.AppCompat.Body2">
         <item name="android:paddingLeft">10dp</item>
     </style>
-
-
 </resources>

@@ -1,7 +1,6 @@
 package com.aula.wash.it;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,6 +8,7 @@ import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
+import java.util.Objects;
 
 
 public class Splash extends AppCompatActivity {
@@ -19,12 +19,9 @@ public class Splash extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Objects.requireNonNull(getSupportActionBar()).hide();
         getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.white));
 
-
-        // Aplicar o tema de tela cheia
-        setTheme(R.style.SplashTheme);
 
         setContentView(R.layout.activity_splash);
 

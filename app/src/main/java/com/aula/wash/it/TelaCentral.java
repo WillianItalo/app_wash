@@ -60,6 +60,9 @@ public class TelaCentral extends AppCompatActivity {
             } else if (itemId == R.id.idPedido) {
                 startActivity(new Intent(TelaCentral.this, Pedido.class));
                 return true;
+            }else if (itemId == R.id.idHome) {
+                startActivity(new Intent(TelaCentral.this, TelaCentral.class));
+                return true;
             }
             // Se nenhum item corresponder, retorne falso
             return false;

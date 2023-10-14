@@ -1,12 +1,15 @@
 package com.aula.wash.it;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat; // Importe a classe ContextCompat
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Build; // Importe a classe Build
+import android.view.Menu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,8 +28,36 @@ public class Servico extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.azul_do_wash_azul));
         }
-
         setContentView(R.layout.activity_servico);
+
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        Menu menu = bottomNavigationView.getMenu();
+
+
+        menu.findItem(R.id.idServico).setChecked(true);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+
+            if (itemId == R.id.idPagamento) {
+                startActivity(new Intent(Servico.this, Pagamento.class));
+                return true;
+            } else if (itemId == R.id.idEntrega) {
+                startActivity(new Intent(Servico.this, Entrega.class));
+                return true;
+            } else if (itemId == R.id.idHome) {
+                startActivity(new Intent(Servico.this, TelaCentral.class));
+                return true;
+            } else if (itemId == R.id.idPedido) {
+                startActivity(new Intent(Servico.this, Pedido.class));
+                return true;
+            }else if (itemId == R.id.idServico) {
+                startActivity(new Intent(Servico.this, Servico.class));
+                return true;
+            }
+            // Se nenhum item corresponder, retorne falso
+            return false;
+        });
 
         RecyclerView recyclerServicos = findViewById(R.id.RecyclerServicos);
         // DEFINE LAYOUT
