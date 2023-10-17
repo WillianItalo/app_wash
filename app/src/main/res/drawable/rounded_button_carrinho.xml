@@ -1,4 +1,14 @@
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="5dp" /><!-- Ajuste o valor de "radius" conforme necessário -->
-    <solid android:color="@color/white" /> <!-- Cor de preenchimento do botão -->
-</shape>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="5dp" />
+            <solid android:color="@color/cinza" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="5dp" />
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+</selector>

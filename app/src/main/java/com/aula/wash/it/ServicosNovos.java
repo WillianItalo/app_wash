@@ -1,5 +1,6 @@
 package com.aula.wash.it;
 
+
 public class ServicosNovos {
     private String txtServico ;
     private String txtTitulo;
@@ -8,12 +9,7 @@ public class ServicosNovos {
     public ServicosNovos() {
     }
 
-    public ServicosNovos(String txtServico, String txtTitulo, String txtPreco, int imgServico) {
-        this.txtServico = txtServico;
-        this.txtTitulo = txtTitulo;
-        this.txtPreco = txtPreco;
-        this.imgServico = imgServico;
-    }
+
 
     public String getTxtServico() {
         return txtServico;

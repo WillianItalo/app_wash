@@ -1,6 +1,8 @@
 package com.aula.wash.it;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,7 +23,6 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Objects.requireNonNull(getSupportActionBar()).hide();
         getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.white));
-
 
         setContentView(R.layout.activity_splash);
 

@@ -44,8 +44,9 @@
 
     <!-- CONTEUDO PRINCIPAL   -->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_margin="15dp"
         android:background="@drawable/fundo_decorativo_servicos"
         android:elevation="10dp"
@@ -54,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view14">
+        app:layout_constraintTop_toBottomOf="@+id/imageView9">
 
         <!-- Título da tela de pagamento -->
         <TextView
@@ -74,39 +75,39 @@
             android:id="@+id/cardNumberInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:textColor="@color/white"
-            android:background="@color/azul_do_wash_azul"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:hint="Número do Cartão" />
+            android:background="@color/azul_do_wash_azul"
+            android:hint="Número do Cartão"
+            android:padding="15dp"
+            android:textColor="@color/white" />
 
         <!-- Campo de entrada para a data de validade -->
         <EditText
             android:id="@+id/expiryDateInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:background="@color/azul_do_wash_azul"
-            android:textColor="@color/white"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:hint="Data de Validade (MM/AA)" />
+            android:background="@color/azul_do_wash_azul"
+            android:hint="Data de Validade (MM/AA)"
+            android:padding="15dp"
+            android:textColor="@color/white" />
 
         <!-- Campo de entrada para o código de segurança (CVV) -->
         <EditText
             android:id="@+id/cvvInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/azul_do_wash_azul"
-            android:textColor="@color/white"
-            android:padding="15dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:hint="CVV" />
+            android:background="@color/azul_do_wash_azul"
+            android:hint="CVV"
+            android:padding="15dp"
+            android:textColor="@color/white" />
 
         <!-- Botão para processar o pagamento -->
         <Button
@@ -115,13 +116,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="24dp"
+            android:background="@drawable/button_retangulo_efeito_vidro"
             android:elevation="10dp"
-            android:textStyle="bold"
-            android:textCursorDrawable="@color/black"
-            android:background="@color/azul_do_wash_azul"
             android:padding="20dp"
             android:text="Processar Pagamento"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textCursorDrawable="@color/black"
+            android:textStyle="bold" />
 
     </LinearLayout>
     <!-- FIM CONTEUDO   -->
@@ -143,6 +144,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_navigation_menu"
         tools:ignore="VisualLintBottomNav" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6"
+        app:srcCompat="@drawable/logo_cartao_decoracao" />
     <!--  FIM NAVGATION  -->
 
 

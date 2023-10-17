@@ -44,15 +44,18 @@
         app:layout_constraintStart_toEndOf="@+id/imageView" />
 
     <!--  IMAGEM DO CARRINHO  -->
-    <ImageView
+    <ImageButton
         android:id="@+id/carrinhoDecompras"
-        android:layout_width="29dp"
-        android:layout_height="29dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/white"
+        android:onClick="abrirPedido"
         app:layout_constraintBottom_toBottomOf="@+id/bg_barra"
         app:layout_constraintEnd_toEndOf="@+id/bg_barra"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:srcCompat="@drawable/icone_carrinho_servicos_24" />
+        app:srcCompat="@drawable/icone_carrinho_servicos_24"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <!-- BARRA DE DECORAÇÃO   -->
     <View

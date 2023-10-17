@@ -8,8 +8,13 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Build; // Importe a classe Build
+import android.os.Build;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,12 +34,9 @@ public class Servico extends AppCompatActivity {
             getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.azul_do_wash_azul));
         }
         setContentView(R.layout.activity_servico);
-
-
+        //MENU NAV
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         Menu menu = bottomNavigationView.getMenu();
-
-
         menu.findItem(R.id.idServico).setChecked(true);
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
@@ -51,7 +53,7 @@ public class Servico extends AppCompatActivity {
             } else if (itemId == R.id.idPedido) {
                 startActivity(new Intent(Servico.this, Pedido.class));
                 return true;
-            }else if (itemId == R.id.idServico) {
+            } else if (itemId == R.id.idServico) {
                 startActivity(new Intent(Servico.this, Servico.class));
                 return true;
             }
@@ -68,6 +70,22 @@ public class Servico extends AppCompatActivity {
         this.prepararServicos();
         AdapterServicos adapter = new AdapterServicos(ServicosNovos);
         recyclerServicos.setAdapter(adapter);
+
+        // BOTÃO DO CARRINHO QUE INDICA O TOTAL
+        ImageButton carrinhoDecompras = findViewById(R.id.carrinhoDecompras);
+
+        carrinhoDecompras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Crie uma Intent para iniciar a nova Activity
+                Intent intent = new Intent(getApplicationContext(), Pedido.class);
+
+                // Inicie a nova Activity
+                startActivity(intent);
+            }
+        });
+
+
     }
 
     // CONFIGURA UMA NOVA LISTA DE SERVIÇOS
@@ -134,7 +152,46 @@ public class Servico extends AppCompatActivity {
         servico9.setTxtTitulo("Remoção de crease");
         servico9.setTxtPreco("R$ 39.99");
         this.ServicosNovos.add(servico9);
-
-
     }
+
+    public void adicionarAoCarrinho(View view) {
+        // Tornar o botão invisível
+        Button addCarrinho = findViewById(R.id.addCarrinho);
+        addCarrinho.setVisibility(View.GONE);
+
+        // Tornar o layout de aumento, diminuição e quantidade visível
+        LinearLayout layoutBotoes = findViewById(R.id.layoutBotoes);
+        layoutBotoes.setVisibility(View.VISIBLE);
+
+        // Configurar um valor inicial para a quantidade (por exemplo, 1)
+        final int[] quantidade = {1};
+        TextView quantidadeText = findViewById(R.id.quantidadeText);
+        quantidadeText.setText(String.valueOf(quantidade[0]));
+
+        // Defini os ouvintes dos botões de aumento e diminuição
+        ImageButton btnDiminuir = findViewById(R.id.btnDiminuir);
+        ImageButton btnAumentar = findViewById(R.id.btnAumentar);
+
+        btnDiminuir.setOnClickListener(v -> {
+            quantidade[0]--;
+            if (quantidade[0] < 1) {
+                quantidade[0] = 1;
+                addCarrinho.setVisibility(View.VISIBLE);
+            }
+            quantidadeText.setText(String.valueOf(quantidade[0]));
+
+            if (quantidade[0] == 0) {
+                // Tornar o botão "Adicionar ao Carrinho" visível novamente
+                addCarrinho.setVisibility(View.VISIBLE);
+                layoutBotoes.setVisibility(View.GONE);
+            }
+        });
+
+        btnAumentar.setOnClickListener(v -> {
+            quantidade[0]++;
+            quantidadeText.setText(String.valueOf(quantidade[0]));
+        });
+    }
+
+
 }

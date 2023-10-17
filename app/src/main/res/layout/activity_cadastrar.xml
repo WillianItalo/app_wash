@@ -11,30 +11,32 @@
     <!-- Fundo decorativo -->
 
     <!-- Botão de cadastro -->
+
+    <!-- TextInputLayout para Confirmar Senha -->
+
     <TextView
         android:id="@+id/fundoDecoracao"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginStart="50dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="50dp"
         android:background="@color/white"
         android:fontFamily="@font/arimo"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.83" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
         android:background="@color/white"
         android:padding="20dp"
@@ -43,23 +45,31 @@
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutConfirmPassword" />
 
-    <!-- TextInputLayout para Confirmar Senha -->
+    <!-- TextInputLayout para Senha -->
+
+    <!-- TextInputLayout para Email -->
+
+    <!-- TextInputLayout para Nome -->
+
+    <!-- TextInputLayout para CPF -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutConfirmPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
         android:hint="Confirme a Senha"
         app:backgroundTint="@drawable/text_input_layout_bg"
         app:hintTextColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextConfirmPassword"
@@ -71,20 +81,20 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- TextInputLayout para Senha -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
         android:hint="Senha"
         app:backgroundTint="@color/white"
         app:hintTextColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCpf">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextPassword"
@@ -96,20 +106,20 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- TextInputLayout para Email -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
         android:hint="Email"
         app:backgroundTint="@color/white"
         app:hintTextColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutName">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextEmail"
@@ -121,19 +131,18 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- TextInputLayout para Nome -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
         android:hint="Nome"
         app:hintTextColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/buttonRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/fundoDecoracao">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextName"
@@ -146,21 +155,47 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Botão Voltar -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutCpf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:hint="CPF"
+        app:backgroundTint="@color/white"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextCpf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/voltarLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
         android:background="@color/white"
         android:drawableTop="@drawable/baseline_home_24"
-        android:gravity="center_vertical|center_horizontal"
-        android:paddingTop="15dp"
+        android:drawableTint="@color/azul_do_wash_azul"
+        android:paddingVertical="8dp"
         android:text="VOLTAR"
         android:textColor="@color/azul_do_wash_azul"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
 
@@ -174,12 +209,12 @@
         android:textColor="@color/azul_do_wash_azul"
         android:textSize="30dp"
         android:textStyle="italic"
-        app:layout_constraintTop_toTopOf="@+id/fundoDecoracao"
         app:layout_constraintBottom_toBottomOf="@+id/fundoDecoracao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/fundoDecoracao"
+        app:layout_constraintVertical_bias="0.575" />
 
     <!-- Barra preta decorativa abaixo do botão Voltar -->
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

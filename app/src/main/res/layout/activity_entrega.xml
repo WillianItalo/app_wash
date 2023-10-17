@@ -294,7 +294,6 @@
 
 
 
-    <!--BARRA DE NAVGATION / TEM QUE COLOCAR A LOGICA PARA FICAR FIXO EM TODOS ACTIVITY-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="0dp"
@@ -316,14 +315,14 @@
         android:layout_width="0dp"
         android:layout_height="63dp"
         android:layout_margin="20dp"
-        android:background="@color/azul_do_wash_azul"
+        android:background="@drawable/button_retangulo_selector"
         android:text="SUPORTE"
         android:elevation="10dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-    <!--  FIM BARRA NAVBAR  -->
+
 
 
 

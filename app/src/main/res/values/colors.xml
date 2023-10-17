@@ -15,5 +15,7 @@
     <color name="cor_padrao">#2196F3</color> <!-- Verde em outros estados -->
     <!-- 2 COR DO APP   -->
     <color name="azul_do_wash_azul">#4683BA</color>
+    <color name="btnEfeito">#B54683BA</color>
+
 
 </resources>
