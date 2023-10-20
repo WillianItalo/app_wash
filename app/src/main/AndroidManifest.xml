@@ -15,31 +15,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design">
         <activity
-            android:name=".Cadastrar_endereco"
+            android:name=".activity.pg_pix"
             android:exported="false" />
         <activity
-            android:name=".Pedido"
+            android:name=".activity.PagamentoPix"
             android:exported="false" />
         <activity
-            android:name=".Servico"
+            android:name=".activity.Cadastrar_endereco"
             android:exported="false" />
         <activity
-            android:name=".Entrega"
+            android:name=".activity.Pedido"
             android:exported="false" />
         <activity
-            android:name=".Pagamento"
+            android:name=".activity.Servico"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.Entrega"
             android:exported="false" />
         <activity
-            android:name=".TelaCentral"
+            android:name=".activity.Pagamento"
             android:exported="false" />
         <activity
-            android:name=".Cadastrar"
+            android:name=".activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Splash"
+            android:name=".activity.TelaCentral"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Cadastrar"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,6 +53,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

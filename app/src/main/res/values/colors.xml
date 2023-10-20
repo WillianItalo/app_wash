@@ -9,6 +9,7 @@
     <color name="bgnavigation">#111B25</color>
     <color name="cinza">#ECEDEC</color>
     <color name="bg_azulbb">#4683BA</color>
+    <color name="cinzaLight">#E1E1E1</color>
 
     <!-- INPUT DE PESQUISA QUANDO ESTÁ EM FOCO   -->
     <color name="cor_focada">#FFFFFF</color> <!-- Vermelho quando focado -->

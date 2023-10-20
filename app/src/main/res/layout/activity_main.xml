@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/azul_do_wash_azul"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
 
     <ImageView
@@ -114,7 +121,8 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="30dp"
-        android:background="@color/white"
+        android:background="@drawable/button_retangulo_selector"
+        android:backgroundTint="@color/white"
         android:contentDescription="@string/google"
         android:drawableBottom="@drawable/iconegoogle2"
         android:elevation="8dp"
@@ -133,7 +141,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="15dp"
-        android:background="@color/white"
+        android:background="@drawable/button_retangulo_selector"
+        android:backgroundTint="@color/white"
         android:text="@string/registrar"
         android:textAlignment="center"
         android:textColor="@color/azul_do_wash_azul"
@@ -173,7 +182,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="30dp"
-        android:background="@color/white"
+        android:background="@drawable/button_retangulo_selector"
+        android:backgroundTint="@color/white"
         android:elevation="10dp"
         android:text="@string/l_o_g_i_n"
         android:textAlignment="center"
@@ -256,3 +266,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

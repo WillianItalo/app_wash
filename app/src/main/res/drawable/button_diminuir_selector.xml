@@ -1,7 +1,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
         <layer-list>
-            <item android:drawable="@drawable/icone_diminuir_servico" />
+            <item android:drawable="@drawable/icone_menos_servico" />
             <item>
                 <shape android:shape="rectangle">
                     <solid android:color="@color/azul_do_wash_azul" />
@@ -11,7 +11,7 @@
     </item>
     <item>
         <layer-list>
-            <item android:drawable="@drawable/icone_diminuir_servico" />
+            <item android:drawable="@drawable/icone_menos_servico" />
             <item>
                 <shape android:shape="rectangle">
                     <solid android:color="@android:color/transparent" />

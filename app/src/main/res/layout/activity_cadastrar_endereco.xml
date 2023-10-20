@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/white">
 
     <!-- BARRA DO LOGO   -->
@@ -66,9 +74,7 @@
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="15dp"
+        android:layout_margin="15dp"
         android:background="@drawable/fundo_decorativo_servicos"
         android:backgroundTint="@color/white"
         android:elevation="10dp"
@@ -80,42 +86,58 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:padding="10dp"
             android:text="ENDEREÇO SALVO"
             android:textColor="@color/azul_do_wash_azul"
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editTextSearch"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginRight="10dp"
-            android:background="@color/azul_do_wash_azul"
-            android:hint="Pesquisar endereço"
-            android:padding="10dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view8"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/azul_do_wash_azul"
+                android:hint="Pesquisar endereço"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view8"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewAddresses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/fundo_decorativo_servicos"
             android:layout_marginRight="10dp"
+            android:background="@drawable/fundo_decorativo_servicos"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextSearch" />
+
+        <Button
+            android:id="@+id/btnExcluir"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/azul_do_wash_azul"
+            android:text="Excluir"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck" />
     </LinearLayout>
 
     <LinearLayout
@@ -129,12 +151,11 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="CADASTRO DE ENDEREÇO"
@@ -150,13 +171,13 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:background="@color/azul_do_wash_azul"
-            android:hint="Nome"
+            android:hint="CPF"
             android:minHeight="48dp"
             android:padding="10dp"
             android:textColor="@color/white" />
 
         <EditText
-            android:id="@+id/editTextStreet"
+            android:id="@+id/idRua"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -169,7 +190,7 @@
             android:textColor="@color/white" />
 
         <EditText
-            android:id="@+id/editTextCity"
+            android:id="@+id/idCidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -182,7 +203,7 @@
             android:textColor="@color/white" />
 
         <EditText
-            android:id="@+id/editTextZipCode"
+            android:id="@+id/idCep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -195,7 +216,7 @@
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/buttonSave"
+            android:id="@+id/btnSalvar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="50dp"
@@ -208,6 +229,5 @@
     </LinearLayout>
 
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
